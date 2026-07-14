@@ -1,0 +1,65 @@
+{
+  "dummy_metrics": {
+    "ceiling_label_mae": 0.0,
+    "low_visibility_mae": 3.0454545454545454,
+    "macro_mae": 3.0,
+    "mae": 0.5275590551181102,
+    "mean_bias": 0.5275590551181102,
+    "median_absolute_error": 0.0,
+    "n": 127.0,
+    "r2": -0.13508877520312979,
+    "rmse": 1.5292425174462532,
+    "within_1km": 0.9133858267716536,
+    "within_2km": 0.9133858267716536
+  },
+  "evaluation_protocol": "Every prediction is out-of-fold under leave-one-acquisition-date-out cross-validation.",
+  "figures": [
+    "results\\prl\\evaluation\\observed_vs_predicted.png",
+    "results\\prl\\evaluation\\residual_plot.png",
+    "results\\prl\\evaluation\\label_distribution.png",
+    "results\\prl\\evaluation\\mae_by_date.png"
+  ],
+  "interpretation": [
+    "Ordinary MAE is dominated by the 10 km majority label.",
+    "Macro MAE gives equal importance to the 4, 5, 9 and 10 km labels.",
+    "Negative or low R\u00b2 is possible even when MAE is small because the target variance is very small and strongly imbalanced.",
+    "The dummy baseline must remain in all paper tables."
+  ],
+  "selected_confidence_intervals": {
+    "macro_mae": {
+      "ci95_high": 3.3182365321452334,
+      "ci95_low": 1.8107215127179113,
+      "estimate": 2.6901286423989195
+    },
+    "mae": {
+      "ci95_high": 1.5056247124451339,
+      "ci95_low": 0.7104654096212185,
+      "estimate": 1.0368294992895513
+    },
+    "rmse": {
+      "ci95_high": 2.190059023774103,
+      "ci95_low": 1.1405115585917815,
+      "estimate": 1.6274782319150918
+    }
+  },
+  "selected_metrics": {
+    "ceiling_label_mae": 0.7001566370136377,
+    "low_visibility_mae": 2.6436772510609567,
+    "macro_mae": 2.6901286423989195,
+    "mae": 1.0368294992895513,
+    "mean_bias": -0.020988822158232615,
+    "median_absolute_error": 0.6828344794974708,
+    "n": 127.0,
+    "r2": -0.28560477706050835,
+    "rmse": 1.6274782319150918,
+    "within_1km": 0.6614173228346457,
+    "within_2km": 0.905511811023622
+  },
+  "selected_model": "transfer_weighted_ridge",
+  "selected_vs_dummy": {
+    "ci95_high": 0.7244367402308807,
+    "ci95_low": 0.3318394866474129,
+    "mae_difference_a_minus_b": 0.5092704441714411,
+    "probability_a_better_than_b": 0.0
+  }
+}

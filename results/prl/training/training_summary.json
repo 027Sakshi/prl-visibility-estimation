@@ -1,0 +1,54 @@
+{
+  "artifacts": {
+    "all_bundles": [
+      "models/prl/weather_ridge.joblib",
+      "models/prl/image_pca_ridge.joblib",
+      "models/prl/fusion_pca_ridge.joblib",
+      "models/prl/fusion_pca_xgboost.joblib",
+      "models/prl/transfer_weighted_ridge.joblib"
+    ],
+    "metrics": "results/prl/training/model_metrics.csv",
+    "oof_predictions": "results/prl/training/oof_predictions.csv",
+    "selected_bundle": "models/prl/prl_visibility_model.joblib"
+  },
+  "dummy_metrics": {
+    "ceiling_label_mae": 0.0,
+    "low_visibility_mae": 3.0454545454545454,
+    "macro_mae": 3.0,
+    "mae": 0.5275590551181102,
+    "mean_bias": 0.5275590551181102,
+    "median_absolute_error": 0.0,
+    "n": 127.0,
+    "r2": -0.13508877520312979,
+    "rmse": 1.5292425174462532,
+    "within_1km": 0.9133858267716536,
+    "within_2km": 0.9133858267716536
+  },
+  "dummy_wins_standard_mae": true,
+  "evaluation": "Leave-one-date-out cross-validation",
+  "groups": 23,
+  "important_interpretation": "The median dummy is a mandatory reference. Because most PRL labels equal 10 km, it may win ordinary MAE while having no predictive skill. Learned-model selection therefore excludes the dummy and defaults to macro MAE across visibility labels.",
+  "pca_components": 15,
+  "prediction_range": [
+    0.0,
+    20.0
+  ],
+  "selected_metrics": {
+    "ceiling_label_mae": 0.7001566370136376,
+    "low_visibility_mae": 2.6436772510609567,
+    "macro_mae": 2.6901286423989195,
+    "mae": 1.036829499289551,
+    "mean_bias": -0.020988822158232574,
+    "median_absolute_error": 0.6828344794974708,
+    "n": 127.0,
+    "r2": -0.28560477706050813,
+    "rmse": 1.6274782319150918,
+    "within_1km": 0.6614173228346457,
+    "within_2km": 0.905511811023622
+  },
+  "selected_model": "transfer_weighted_ridge",
+  "selection_metric": "macro_mae",
+  "selection_note": "The production/research model is selected among learned models only. The dummy remains the honest standard-MAE reference caused by the 10-km label ceiling/imbalance.",
+  "target_weight_factor": 3.0,
+  "transfer_available": true
+}

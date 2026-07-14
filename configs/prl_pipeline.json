@@ -1,0 +1,21 @@
+{
+  "random_seed": 42,
+  "group_column": "date",
+  "pca_components": 15,
+  "selection_metric": "macro_mae",
+  "transfer_target_weight_factor": 3.0,
+  "ridge_alpha_weather": 10.0,
+  "ridge_alpha_image": 100.0,
+  "ridge_alpha_fusion": 100.0,
+  "ridge_alpha_transfer": 100.0,
+  "xgboost": {
+    "n_estimators": 50,
+    "max_depth": 2,
+    "learning_rate": 0.03,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 5,
+    "reg_alpha": 1.0,
+    "reg_lambda": 10.0
+  }
+}

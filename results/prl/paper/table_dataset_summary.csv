@@ -1,0 +1,10 @@
+statistic,value
+Samples,127.0
+Acquisition dates,23.0
+DINOv2 dimensions,768.0
+Visibility minimum (km),4.0
+Visibility maximum (km),10.0
+10-km majority fraction,0.8267716535433071
+Temperature mean (°C),32.968503937007874
+Humidity mean (%),72.85039370078741
+Solar mean (W/m²),803.7244094488188

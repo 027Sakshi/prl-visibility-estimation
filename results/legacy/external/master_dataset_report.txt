@@ -1,0 +1,9 @@
+======================================================================
+MASTER DATASET REPORT
+======================================================================
+
+Rows : 14906
+Columns : 11
+Duplicate Images : 0
+Missing Images : 0
+Missing Solar Values : 0

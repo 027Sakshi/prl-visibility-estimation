@@ -1,0 +1,27 @@
+============================================================
+WEATHER BASELINE MODEL REPORT
+============================================================
+
+TRAINING RESULTS
+-----------------------------
+MAE  : 1.4088
+RMSE : 2.8588
+R2   : 0.7954
+
+TESTING RESULTS
+-----------------------------
+MAE  : 2.0710
+RMSE : 4.9280
+R2   : 0.4286
+
+5-FOLD CROSS VALIDATION
+-----------------------------
+Average MAE  : 1.9730
+Average RMSE : 4.6000
+Average R2   : 0.4751
+
+FEATURE IMPORTANCE
+-----------------------------
+Humidity             0.4663
+Temperature          0.2826
+Solar Radiation      0.2511

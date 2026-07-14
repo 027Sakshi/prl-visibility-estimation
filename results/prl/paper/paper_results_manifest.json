@@ -1,0 +1,22 @@
+{
+  "draft": "results\\prl\\paper\\paper_results_draft.md",
+  "figures": [
+    "results\\prl\\paper\\paper_model_comparison.png"
+  ],
+  "limitations": [
+    "Only 127 labelled samples are available from one camera and one location.",
+    "The target is highly imbalanced: 105 of 127 observations are labelled 10 km.",
+    "Many images are temporally adjacent; evaluation therefore groups by acquisition date.",
+    "The 10-km label may behave as a measurement ceiling. This must be verified from the label-generation protocol before treating it as an exact continuous value.",
+    "SkyFinder solar radiation and PRL solar intensity are not directly interchangeable; the transfer pipeline uses separate domain scalers rather than the archived global scaler.",
+    "A negative R\u00b2 can coexist with a small MAE when target variance is low and a constant predictor is strong."
+  ],
+  "selected_model": "transfer_weighted_ridge",
+  "tables": [
+    "table_dataset_summary.csv",
+    "table_label_distribution.csv",
+    "table_model_comparison.csv",
+    "table_selected_model_per_label.csv",
+    "table_selected_model_per_date.csv"
+  ]
+}

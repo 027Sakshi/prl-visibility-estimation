@@ -1,0 +1,18 @@
+check,passed,severity,details
+metadata_rows,True,error,127
+metadata_unique_image_names,True,error,0
+metadata_missing_values,True,error,"{'image_name': 0, 'date': 0, 'day': 0, 'time': 0, 'hour': 0, 'temperature_C': 0, 'relative_humidity_%': 0, 'solar_intensity_Wm2': 0, 'visibility_km': 0, 'latitude': 0, 'longitude': 0, 'distance_m': 0}"
+metadata_numeric_parse,True,error,"{'temperature_C': 0, 'relative_humidity_%': 0, 'solar_intensity_Wm2': 0, 'visibility_km': 0, 'latitude': 0, 'longitude': 0, 'distance_m': 0, 'hour': 0}"
+embedding_rows,True,error,127
+embedding_unique_image_names,True,error,0
+embedding_dimension,True,error,768
+embedding_finite,True,error,0
+metadata_embedding_count,True,error,"{'metadata': 127, 'embeddings': 127}"
+metadata_embedding_names,True,error,"{'exact_match': True, 'row_order_fallback_possible': True, 'metadata_hash': '29749d15e65f9be89d7860c48aa95ea10f6adc7f3590d7987bff451c348e0cb7', 'embedding_hash': '29749d15e65f9be89d7860c48aa95ea10f6adc7f3590d7987bff451c348e0cb7'}"
+images_readable,True,error,[]
+image_count_matches_metadata,True,error,"{'images': 127, 'metadata': 127}"
+image_names_match_table,True,error,"{'exact_match': True, 'same_count': True}"
+label_imbalance,False,warning,"{'counts': {'4': 1, '5': 10, '9': 11, '10': 105}, 'majority_fraction': 0.8267716535433071}"
+visibility_nonnegative,True,error,"{'min': 4.0, 'max': 10.0}"
+humidity_range,True,error,"{'min': 57.0, 'max': 89.0}"
+source_target_solar_scale,False,warning,"{'source_median': 4.8029, 'target_median': 798.0, 'median_ratio': 166.14961793916174}"

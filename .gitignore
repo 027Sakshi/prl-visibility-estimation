@@ -1,0 +1,73 @@
+# Python environments and caches
+venv/
+.venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# IDE and operating-system files
+.vscode/
+.idea/
+*.code-workspace
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Build and packaging output
+build/
+dist/
+*.egg-info/
+
+# Local logs and temporary files
+*.log
+*.tmp
+*.temp
+~$*
+
+# Raw/private and generated datasets
+# Keep only documentation describing how to provide the data locally.
+data/*
+!data/README.md
+!data/prl/
+data/prl/*
+!data/prl/metadata/
+data/prl/metadata/*
+!data/prl/metadata/README.md
+
+# Trained model binaries are reproducible outputs, not source code.
+models/*
+!models/README.md
+
+# Detailed predictions may expose row-level labels and are regenerated.
+results/**/*predictions*.csv
+results/**/oof_predictions.csv
+results/**/fold_metrics.csv
+results/prl/predictions/
+results/prl/result_inventory.csv
+
+# Serialized artifacts accidentally written under results
+results/**/*.joblib
+results/**/*.pkl
+results/**/*.npy
+
+# Local experiment tracking directories
+mlruns/
+wandb/
+
+# Optional local secrets
+.env
+.env.*
+!.env.example
+
+# Local structure dumps
+flow.txt

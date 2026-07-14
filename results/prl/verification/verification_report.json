@@ -1,0 +1,403 @@
+{
+  "checks": [
+    {
+      "check": "metadata_rows",
+      "details": 127,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "check": "metadata_unique_image_names",
+      "details": 0,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "check": "metadata_missing_values",
+      "details": {
+        "date": 0,
+        "day": 0,
+        "distance_m": 0,
+        "hour": 0,
+        "image_name": 0,
+        "latitude": 0,
+        "longitude": 0,
+        "relative_humidity_%": 0,
+        "solar_intensity_Wm2": 0,
+        "temperature_C": 0,
+        "time": 0,
+        "visibility_km": 0
+      },
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "check": "metadata_numeric_parse",
+      "details": {
+        "distance_m": 0,
+        "hour": 0,
+        "latitude": 0,
+        "longitude": 0,
+        "relative_humidity_%": 0,
+        "solar_intensity_Wm2": 0,
+        "temperature_C": 0,
+        "visibility_km": 0
+      },
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "check": "embedding_rows",
+      "details": 127,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "check": "embedding_unique_image_names",
+      "details": 0,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "check": "embedding_dimension",
+      "details": 768,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "check": "embedding_finite",
+      "details": 0,
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "check": "metadata_embedding_count",
+      "details": {
+        "embeddings": 127,
+        "metadata": 127
+      },
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "check": "metadata_embedding_names",
+      "details": {
+        "embedding_hash": "29749d15e65f9be89d7860c48aa95ea10f6adc7f3590d7987bff451c348e0cb7",
+        "exact_match": true,
+        "metadata_hash": "29749d15e65f9be89d7860c48aa95ea10f6adc7f3590d7987bff451c348e0cb7",
+        "row_order_fallback_possible": true
+      },
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "check": "images_readable",
+      "details": [],
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "check": "image_count_matches_metadata",
+      "details": {
+        "images": 127,
+        "metadata": 127
+      },
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "check": "image_names_match_table",
+      "details": {
+        "exact_match": true,
+        "same_count": true
+      },
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "check": "label_imbalance",
+      "details": {
+        "counts": {
+          "10": 105,
+          "4": 1,
+          "5": 10,
+          "9": 11
+        },
+        "majority_fraction": 0.8267716535433071
+      },
+      "passed": false,
+      "severity": "warning"
+    },
+    {
+      "check": "visibility_nonnegative",
+      "details": {
+        "max": 10.0,
+        "min": 4.0
+      },
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "check": "humidity_range",
+      "details": {
+        "max": 89.0,
+        "min": 57.0
+      },
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "check": "source_target_solar_scale",
+      "details": {
+        "median_ratio": 166.14961793916174,
+        "source_median": 4.8029,
+        "target_median": 798.0
+      },
+      "passed": false,
+      "severity": "warning"
+    }
+  ],
+  "dates": 23,
+  "domain_warnings": [
+    "Solar features are in incompatible numerical/physical domains: SkyFinder appears to use daily NASA POWER energy while PRL uses instantaneous W/m\u00b2. Do not reuse the SkyFinder weather scaler directly."
+  ],
+  "embedding_dimension": 768,
+  "embedding_path": "data\\prl\\features\\dinov2_vitb14_embeddings.csv",
+  "embedding_summary": {
+    "max": 6.374599933624268,
+    "mean": -0.029703812673687935,
+    "mean_l2_norm": 45.95061492919922,
+    "min": -6.880896091461182,
+    "std": 1.6579327583312988
+  },
+  "image_directory": "data\\prl_images",
+  "images": {
+    "count": 127,
+    "exists": true,
+    "files": [
+      "PRL_0001.jpg",
+      "PRL_0002.jpg",
+      "PRL_0003.jpg",
+      "PRL_0004.jpg",
+      "PRL_0005.jpg",
+      "PRL_0006.jpg",
+      "PRL_0007.jpg",
+      "PRL_0008.jpg",
+      "PRL_0009.jpg",
+      "PRL_0010.jpg",
+      "PRL_0011.jpg",
+      "PRL_0012.jpg",
+      "PRL_0013.jpg",
+      "PRL_0014.jpg",
+      "PRL_0015.jpg",
+      "PRL_0016.jpg",
+      "PRL_0017.jpg",
+      "PRL_0018.jpg",
+      "PRL_0019.jpg",
+      "PRL_0020.jpg",
+      "PRL_0021.jpg",
+      "PRL_0022.jpg",
+      "PRL_0023.jpg",
+      "PRL_0024.jpg",
+      "PRL_0025.jpg",
+      "PRL_0026.jpg",
+      "PRL_0027.jpg",
+      "PRL_0028.jpg",
+      "PRL_0029.jpg",
+      "PRL_0030.jpg",
+      "PRL_0031.jpg",
+      "PRL_0032.jpg",
+      "PRL_0033.jpg",
+      "PRL_0034.jpg",
+      "PRL_0035.jpg",
+      "PRL_0036.jpg",
+      "PRL_0037.jpg",
+      "PRL_0038.jpg",
+      "PRL_0039.jpg",
+      "PRL_0040.jpg",
+      "PRL_0041.jpg",
+      "PRL_0042.jpg",
+      "PRL_0043.jpg",
+      "PRL_0044.jpg",
+      "PRL_0045.jpg",
+      "PRL_0046.jpg",
+      "PRL_0047.jpg",
+      "PRL_0048.jpg",
+      "PRL_0049.jpg",
+      "PRL_0050.jpg",
+      "PRL_0051.jpg",
+      "PRL_0052.jpg",
+      "PRL_0053.jpg",
+      "PRL_0054.jpg",
+      "PRL_0055.jpg",
+      "PRL_0056.jpg",
+      "PRL_0057.jpg",
+      "PRL_0058.jpg",
+      "PRL_0059.jpg",
+      "PRL_0060.jpg",
+      "PRL_0061.jpg",
+      "PRL_0062.jpg",
+      "PRL_0063.jpg",
+      "PRL_0064.jpg",
+      "PRL_0065.jpg",
+      "PRL_0066.jpg",
+      "PRL_0067.jpg",
+      "PRL_0068.jpg",
+      "PRL_0069.jpg",
+      "PRL_0070.jpg",
+      "PRL_0071.jpg",
+      "PRL_0072.jpg",
+      "PRL_0073.jpg",
+      "PRL_0074.jpg",
+      "PRL_0075.jpg",
+      "PRL_0076.jpg",
+      "PRL_0077.jpg",
+      "PRL_0078.jpg",
+      "PRL_0079.jpg",
+      "PRL_0080.jpg",
+      "PRL_0081.jpg",
+      "PRL_0082.jpg",
+      "PRL_0083.jpg",
+      "PRL_0084.jpg",
+      "PRL_0085.jpg",
+      "PRL_0086.jpg",
+      "PRL_0087.jpg",
+      "PRL_0088.jpg",
+      "PRL_0089.jpg",
+      "PRL_0090.jpg",
+      "PRL_0091.jpg",
+      "PRL_0092.jpg",
+      "PRL_0093.jpg",
+      "PRL_0094.jpg",
+      "PRL_0095.jpg",
+      "PRL_0096.jpg",
+      "PRL_0097.jpg",
+      "PRL_0098.jpg",
+      "PRL_0099.jpg",
+      "PRL_0100.jpg",
+      "PRL_0101.jpg",
+      "PRL_0102.jpg",
+      "PRL_0103.jpg",
+      "PRL_0104.jpg",
+      "PRL_0105.jpg",
+      "PRL_0106.jpg",
+      "PRL_0107.jpg",
+      "PRL_0108.jpg",
+      "PRL_0109.jpg",
+      "PRL_0110.jpg",
+      "PRL_0111.jpg",
+      "PRL_0112.jpg",
+      "PRL_0113.jpg",
+      "PRL_0114.jpg",
+      "PRL_0115.jpg",
+      "PRL_0116.jpg",
+      "PRL_0117.jpg",
+      "PRL_0118.jpg",
+      "PRL_0119.jpg",
+      "PRL_0120.jpg",
+      "PRL_0121.jpg",
+      "PRL_0122.jpg",
+      "PRL_0123.jpg",
+      "PRL_0124.jpg",
+      "PRL_0125.jpg",
+      "PRL_0126.jpg",
+      "PRL_0127.jpg"
+    ],
+    "invalid": [],
+    "unique_dimensions": [
+      "4000x3000",
+      "5184x3888"
+    ]
+  },
+  "label_counts": {
+    "10": 105,
+    "4": 1,
+    "5": 10,
+    "9": 11
+  },
+  "majority_fraction": 0.8267716535433071,
+  "metadata_path": "data\\prl\\metadata\\prl_dataset_clean.xlsx",
+  "numeric_summary": {
+    "distance_m": {
+      "25%": 265.0,
+      "50%": 265.0,
+      "75%": 265.0,
+      "count": 127.0,
+      "max": 265.0,
+      "mean": 265.0,
+      "min": 265.0,
+      "std": 0.0
+    },
+    "hour": {
+      "25%": 14.0,
+      "50%": 15.0,
+      "75%": 16.0,
+      "count": 127.0,
+      "max": 17.0,
+      "mean": 15.377952755905511,
+      "min": 14.0,
+      "std": 1.1678846285857132
+    },
+    "latitude": {
+      "25%": 23.036,
+      "50%": 23.036,
+      "75%": 23.036,
+      "count": 127.0,
+      "max": 23.036,
+      "mean": 23.036000000000005,
+      "min": 23.036,
+      "std": 3.566783887046927e-15
+    },
+    "longitude": {
+      "25%": 72.544,
+      "50%": 72.544,
+      "75%": 72.544,
+      "count": 127.0,
+      "max": 72.544,
+      "mean": 72.54399999999998,
+      "min": 72.544,
+      "std": 1.4267135548187707e-14
+    },
+    "relative_humidity_%": {
+      "25%": 68.0,
+      "50%": 73.0,
+      "75%": 78.0,
+      "count": 127.0,
+      "max": 89.0,
+      "mean": 72.85039370078741,
+      "min": 57.0,
+      "std": 6.993283331063559
+    },
+    "solar_intensity_Wm2": {
+      "25%": 642.0,
+      "50%": 798.0,
+      "75%": 1012.0,
+      "count": 127.0,
+      "max": 1194.0,
+      "mean": 803.7244094488188,
+      "min": 317.0,
+      "std": 228.07116256357543
+    },
+    "temperature_C": {
+      "25%": 31.8,
+      "50%": 32.9,
+      "75%": 33.8,
+      "count": 127.0,
+      "max": 40.0,
+      "mean": 32.968503937007874,
+      "min": 30.0,
+      "std": 1.6971825760397574
+    },
+    "visibility_km": {
+      "25%": 10.0,
+      "50%": 10.0,
+      "75%": 10.0,
+      "count": 127.0,
+      "max": 10.0,
+      "mean": 9.472440944881889,
+      "min": 4.0,
+      "std": 1.4410466415325063
+    }
+  },
+  "rows": 127
+}
