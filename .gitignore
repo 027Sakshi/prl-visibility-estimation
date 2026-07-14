@@ -71,3 +71,6 @@ wandb/
 
 # Local structure dumps
 flow.txt
+
+# Local inference smoke tests
+results/prl/optimization_v2/*_prediction.json
