@@ -1,4 +1,4 @@
-# PRL Visibility Project — Completion Run Guide
+﻿# PRL Visibility Project â€” Completion Run Guide
 
 This module completes the planned PRL stages while preserving the existing SkyFinder work.
 
@@ -12,7 +12,7 @@ Use Python 3.11. In the VS Code terminal:
 py -3.11 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
-pip install -r requirements-prl.txt
+pip install -r requirements.txt
 ```
 
 On macOS/Linux:
@@ -21,7 +21,7 @@ On macOS/Linux:
 python3.11 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
-pip install -r requirements-prl.txt
+pip install -r requirements.txt
 ```
 
 ## 2. Put the PRL images in the expected folder
@@ -110,10 +110,11 @@ models/prl/prl_visibility_model.joblib
 - PCA and PRL scalers are fitted only inside training folds.
 - SkyFinder and PRL solar variables are scaled separately because their units/domains are incompatible.
 - The constant median predictor is always reported.
-- Ordinary MAE, macro MAE, low-visibility MAE, RMSE, R², bias, and tolerance accuracy are reported.
+- Ordinary MAE, macro MAE, low-visibility MAE, RMSE, RÂ², bias, and tolerance accuracy are reported.
 - Confidence intervals use acquisition-date bootstrap resampling.
 - The selected learned model is chosen by macro MAE, not by hiding the stronger constant baseline on ordinary MAE.
 
 ## 8. Current result from the supplied legacy embeddings
 
 The leakage-controlled run selects `transfer_weighted_ridge` by macro MAE. However, the constant 10-km median predictor has the lowest ordinary MAE because 105 of the 127 labels equal 10 km. This is a central dataset finding and must remain in the final paper.
+

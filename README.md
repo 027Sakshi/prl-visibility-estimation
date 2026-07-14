@@ -1,4 +1,4 @@
-# PRL Visibility Estimation
+﻿# PRL Visibility Estimation
 
 Research pipeline for estimating atmospheric visibility from sky images and meteorological variables. The project uses frozen DINOv2 image embeddings, weather features, transfer learning from SkyFinder, and leakage-controlled regression benchmarks on the PRL dataset.
 
@@ -20,7 +20,7 @@ All integration tests currently pass.
 
 The evaluation uses 127 images collected over 23 acquisition dates. The target distribution is strongly imbalanced: 105 observations have visibility exactly equal to 10 km.
 
-| Model | MAE (km) | RMSE (km) | R² | Macro MAE (km) |
+| Model | MAE (km) | RMSE (km) | RÂ² | Macro MAE (km) |
 |---|---:|---:|---:|---:|
 | Transfer-weighted Ridge | 1.037 | 1.627 | -0.286 | **2.690** |
 | Fusion PCA XGBoost | **0.893** | **1.487** | **-0.073** | 2.794 |
@@ -44,7 +44,7 @@ data/README.md            Local data instructions; datasets are not committed
 models/README.md          Model-generation instructions; binaries are not committed
 results/                  Aggregate metrics, reports, and paper figures
 run_prl_pipeline.py       End-to-end PRL entry point
-requirements-prl.txt      Direct project dependencies
+requirements.txt      Direct project dependencies
 ```
 
 ## Environment
@@ -55,7 +55,7 @@ Python 3.11 is recommended.
 py -3.11 -m venv venv
 .\venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
-python -m pip install -r requirements-prl.txt
+python -m pip install -r requirements.txt
 ```
 
 ## Data setup
@@ -108,3 +108,4 @@ python src/prl/06_predict.py `
 ## Next research stage
 
 The next locked experiment cycle will add nested grouped model selection, physically engineered weather features, PLS regression, horizon-region embeddings, and a secondary reduced-visibility classification benchmark.
+
