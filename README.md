@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-﻿# PRL Visibility Estimation
-=======
 <div align="center">
 
 # PRL Visibility Estimation
->>>>>>> ae36a20ce711216a0c9df9f8d08e514a39aa632a
 
 ### Leakage-controlled atmospheric visibility estimation from fixed-camera imagery and meteorological observations
 
@@ -26,37 +22,12 @@
 
 This repository contains the complete research pipeline developed for estimating atmospheric visibility at the Physical Research Laboratory using fixed-camera images and meteorological observations. The work combines frozen DINOv2 image representations, weather variables, source-domain experiments using online camera data, transfer and fusion models, grouped validation, uncertainty estimation, and single-image inference.
 
-<<<<<<< HEAD
-| Model | MAE (km) | RMSE (km) | RÂ² | Macro MAE (km) |
-|---|---:|---:|---:|---:|
-| Transfer-weighted Ridge | 1.037 | 1.627 | -0.286 | **2.690** |
-| Fusion PCA XGBoost | **0.893** | **1.487** | **-0.073** | 2.794 |
-| Weather Ridge | 0.969 | 1.520 | -0.122 | 2.819 |
-| Image PCA Ridge | 1.008 | 1.548 | -0.163 | 2.840 |
-| Fusion PCA Ridge | 1.013 | 1.560 | -0.181 | 2.850 |
-| Median baseline | 0.528 | 1.529 | -0.135 | 3.000 |
-=======
 The final analysis uses **127 PRL images collected across 23 independent acquisition dates**. Because **105 observations are exactly 10 km**, the project reports both conventional sample-weighted regression metrics and reduced-visibility/regime-balanced metrics. Final paper values come exclusively from nested acquisition-date-grouped validation.
->>>>>>> ae36a20ce711216a0c9df9f8d08e514a39aa632a
 
 > This repository is a research prototype. It is not intended for operational or safety-critical visibility monitoring.
 
 ## Research objectives
 
-<<<<<<< HEAD
-```text
-configs/                 Pipeline configuration
-src/prl/                 Current PRL pipeline
-src/                     SkyFinder preparation and baseline modules
-tests/                   Integration tests
-experiments/legacy/      Earlier exploratory experiment entry points
-docs/                    Run guide, status notes, and archived documents
-data/README.md            Local data instructions; datasets are not committed
-models/README.md          Model-generation instructions; binaries are not committed
-results/                  Aggregate metrics, reports, and paper figures
-run_prl_pipeline.py       End-to-end PRL entry point
-requirements.txt      Direct project dependencies
-=======
 The project was designed to answer four questions:
 
 1. Can frozen DINOv2 embeddings extract visibility-relevant information from a small, fixed-camera image dataset?
@@ -78,7 +49,6 @@ flowchart LR
     H --> I[Nested Leave-One-Date-Out evaluation]
     I --> J[5,000 date-cluster bootstrap samples]
     J --> K[Final tables, figures and deployable models]
->>>>>>> ae36a20ce711216a0c9df9f8d08e514a39aa632a
 ```
 
 ## Data summary
@@ -197,7 +167,7 @@ py -3.11 -m venv venv
 .\venv\Scripts\Activate.ps1
 
 python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
+python -m pip install -r requirements-prl.txt
 ```
 
 ## Data setup
@@ -269,10 +239,6 @@ python -m unittest `
   -v
 ```
 
-<<<<<<< HEAD
-The next locked experiment cycle will add nested grouped model selection, physically engineered weather features, PLS regression, horizon-region embeddings, and a secondary reduced-visibility classification benchmark.
-
-=======
 Current status: **7 tests passed**.
 
 ## Reproducibility and result policy
@@ -332,4 +298,3 @@ This project was developed as a PRL-oriented atmospheric visibility research stu
 ## Disclaimer
 
 This repository documents an experimental research pipeline. Predictions are not calibrated for aviation, transport, public safety or operational meteorological use.
->>>>>>> ae36a20ce711216a0c9df9f8d08e514a39aa632a
