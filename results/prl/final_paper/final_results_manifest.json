@@ -1,0 +1,24 @@
+{
+  "best_learned_by_balanced_regime_mae": "nested_svr_balanced",
+  "best_learned_by_mae": "nested_svr_mae",
+  "paper_tables": [
+    "table_final_model_comparison.csv",
+    "table_final_paired_vs_dummy.csv",
+    "table_final_per_date.csv",
+    "table_outer_fold_hyperparameter_selections.csv",
+    "table_full_data_inner_selection.csv"
+  ],
+  "primary_metric": "mae",
+  "secondary_metrics": [
+    "rmse",
+    "r2",
+    "low_visibility_mae",
+    "ceiling_label_mae",
+    "balanced_regime_mae",
+    "date_macro_mae",
+    "within_1km",
+    "mean_bias"
+  ],
+  "source_directory": "C:\\Users\\saksh\\OneDrive\\Desktop\\PRL_Visibility_Project\\results\\prl\\final_nested",
+  "status": "final_locked_nested_results"
+}

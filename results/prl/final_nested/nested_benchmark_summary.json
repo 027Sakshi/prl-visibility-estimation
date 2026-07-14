@@ -1,0 +1,177 @@
+{
+  "final_full_data_balanced_candidate": {
+    "C": 30.0,
+    "epsilon": 0.75,
+    "feature_mode": "image",
+    "name": "image_svr_pc2_C30.0_e0.75",
+    "pca_components": 2
+  },
+  "final_full_data_mae_candidate": {
+    "C": 30.0,
+    "epsilon": 0.25,
+    "feature_mode": "image",
+    "name": "image_svr_pc2_C30.0_e0.25",
+    "pca_components": 2
+  },
+  "locked_candidate_count": 20,
+  "locked_candidates": [
+    {
+      "C": 10.0,
+      "epsilon": 0.25,
+      "feature_mode": "image",
+      "name": "image_svr_pc2_C10.0_e0.25",
+      "pca_components": 2
+    },
+    {
+      "C": 10.0,
+      "epsilon": 0.5,
+      "feature_mode": "image",
+      "name": "image_svr_pc2_C10.0_e0.5",
+      "pca_components": 2
+    },
+    {
+      "C": 10.0,
+      "epsilon": 0.75,
+      "feature_mode": "image",
+      "name": "image_svr_pc2_C10.0_e0.75",
+      "pca_components": 2
+    },
+    {
+      "C": 30.0,
+      "epsilon": 0.25,
+      "feature_mode": "image",
+      "name": "image_svr_pc2_C30.0_e0.25",
+      "pca_components": 2
+    },
+    {
+      "C": 30.0,
+      "epsilon": 0.5,
+      "feature_mode": "image",
+      "name": "image_svr_pc2_C30.0_e0.5",
+      "pca_components": 2
+    },
+    {
+      "C": 30.0,
+      "epsilon": 0.75,
+      "feature_mode": "image",
+      "name": "image_svr_pc2_C30.0_e0.75",
+      "pca_components": 2
+    },
+    {
+      "C": 10.0,
+      "epsilon": 0.25,
+      "feature_mode": "image",
+      "name": "image_svr_pc3_C10.0_e0.25",
+      "pca_components": 3
+    },
+    {
+      "C": 10.0,
+      "epsilon": 0.5,
+      "feature_mode": "image",
+      "name": "image_svr_pc3_C10.0_e0.5",
+      "pca_components": 3
+    },
+    {
+      "C": 10.0,
+      "epsilon": 0.75,
+      "feature_mode": "image",
+      "name": "image_svr_pc3_C10.0_e0.75",
+      "pca_components": 3
+    },
+    {
+      "C": 30.0,
+      "epsilon": 0.25,
+      "feature_mode": "image",
+      "name": "image_svr_pc3_C30.0_e0.25",
+      "pca_components": 3
+    },
+    {
+      "C": 30.0,
+      "epsilon": 0.5,
+      "feature_mode": "image",
+      "name": "image_svr_pc3_C30.0_e0.5",
+      "pca_components": 3
+    },
+    {
+      "C": 30.0,
+      "epsilon": 0.75,
+      "feature_mode": "image",
+      "name": "image_svr_pc3_C30.0_e0.75",
+      "pca_components": 3
+    },
+    {
+      "C": 3.0,
+      "epsilon": 0.25,
+      "feature_mode": "fusion",
+      "name": "fusion_svr_pc2_C3.0_e0.25",
+      "pca_components": 2
+    },
+    {
+      "C": 3.0,
+      "epsilon": 0.5,
+      "feature_mode": "fusion",
+      "name": "fusion_svr_pc2_C3.0_e0.5",
+      "pca_components": 2
+    },
+    {
+      "C": 10.0,
+      "epsilon": 0.25,
+      "feature_mode": "fusion",
+      "name": "fusion_svr_pc2_C10.0_e0.25",
+      "pca_components": 2
+    },
+    {
+      "C": 10.0,
+      "epsilon": 0.5,
+      "feature_mode": "fusion",
+      "name": "fusion_svr_pc2_C10.0_e0.5",
+      "pca_components": 2
+    },
+    {
+      "C": 3.0,
+      "epsilon": 0.25,
+      "feature_mode": "fusion",
+      "name": "fusion_svr_pc3_C3.0_e0.25",
+      "pca_components": 3
+    },
+    {
+      "C": 3.0,
+      "epsilon": 0.5,
+      "feature_mode": "fusion",
+      "name": "fusion_svr_pc3_C3.0_e0.5",
+      "pca_components": 3
+    },
+    {
+      "C": 10.0,
+      "epsilon": 0.25,
+      "feature_mode": "fusion",
+      "name": "fusion_svr_pc3_C10.0_e0.25",
+      "pca_components": 3
+    },
+    {
+      "C": 10.0,
+      "epsilon": 0.5,
+      "feature_mode": "fusion",
+      "name": "fusion_svr_pc3_C10.0_e0.5",
+      "pca_components": 3
+    }
+  ],
+  "n_dates": 23,
+  "n_samples": 127,
+  "protocol": {
+    "inner": "GroupKFold(n_splits=5) on outer-training dates",
+    "outer": "LeaveOneGroupOut by acquisition date",
+    "preprocessing": "Image scaling, PCA, weather engineering/scaling, and SVR fitting repeated inside every inner and outer training split.",
+    "selection_objectives": [
+      "mae",
+      "balanced_regime_mae"
+    ]
+  },
+  "result_files": {
+    "metrics": "C:\\Users\\saksh\\OneDrive\\Desktop\\PRL_Visibility_Project\\results\\prl\\final_nested\\nested_model_metrics.csv",
+    "outer_selections": "C:\\Users\\saksh\\OneDrive\\Desktop\\PRL_Visibility_Project\\results\\prl\\final_nested\\outer_fold_selections.csv",
+    "predictions": "C:\\Users\\saksh\\OneDrive\\Desktop\\PRL_Visibility_Project\\results\\prl\\final_nested\\nested_oof_predictions.csv"
+  },
+  "runtime_seconds": 17.636569399997825,
+  "transfer_reference_note": "Imported from the previously completed fixed leave-one-date-out baseline."
+}

@@ -293,13 +293,14 @@ def main() -> int:
     splits, cache = build_fold_cache(image, weather_engineered, groups, max_components, args.seed)
 
     rows: list[dict[str, Any]] = []
-    prediction_frame = frame[["image_name", "date", "visibility_km"]].copy()
+    prediction_base = frame[["image_name", "date", "visibility_km"]].copy()
+    prediction_columns: dict[str, np.ndarray] = {}
 
     dummy_predictions = np.full(len(target), 10.0, dtype=float)
     dummy_metrics = calculate_metrics(target, dummy_predictions, ceiling=10.0)
     dummy_metrics["balanced_regime_mae"] = balanced_regime_mae(target, dummy_predictions)
     rows.append({"model": "dummy_10km", "family": "dummy", **dummy_metrics})
-    prediction_frame["dummy_10km"] = dummy_predictions
+    prediction_columns["dummy_10km"] = dummy_predictions
 
     print("=" * 84)
     print("PRL FOCUSED ACCURACY OPTIMIZATION")
@@ -320,7 +321,7 @@ def main() -> int:
         metrics = calculate_metrics(target, prediction, ceiling=10.0)
         metrics["balanced_regime_mae"] = balanced_regime_mae(target, prediction)
         rows.append({"model": name, **candidate, **metrics})
-        prediction_frame[name] = prediction
+        prediction_columns[name] = prediction
         if index % 20 == 0 or index == len(candidates):
             print(f"Evaluated {index}/{len(candidates)} candidates")
 
@@ -342,6 +343,9 @@ def main() -> int:
 
     metrics_frame.sort_values(["mae", "macro_mae"]).to_csv(
         results_dir / "candidate_metrics.csv", index=False
+    )
+    prediction_frame = pd.concat(
+        [prediction_base.reset_index(drop=True), pd.DataFrame(prediction_columns)], axis=1
     )
     prediction_frame.to_csv(results_dir / "oof_predictions.csv", index=False)
 
