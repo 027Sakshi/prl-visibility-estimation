@@ -289,7 +289,7 @@ Generated embedding arrays and model binaries are excluded because they are larg
 
 ## Author
 
-**[Sakshi](https://www.linkedin.com/in/sakshi-giglani/)**  
+**[Sakshi Giglani](https://www.linkedin.com/in/sakshi-giglani/)**  
 
 ## Acknowledgements
 
