@@ -73,4 +73,14 @@ def predict_from_bundle(bundle: dict[str, Any] | LocalRidgeBundle | TransferRidg
     payload = bundle.get("estimator") if isinstance(bundle, dict) else None
     if isinstance(payload, (LocalRidgeBundle, TransferRidgeBundle)):
         return payload.predict(image, weather)
+    # Extension point for research bundles such as OptimizedSVRBundle.
+    # The wrapper, rather than a raw sklearn estimator, must expose the
+    # project-level predict(image, weather) signature.
+    if payload is not None and callable(getattr(payload, "predict", None)):
+        try:
+            return payload.predict(image, weather)
+        except TypeError as exc:
+            raise TypeError(
+                "The stored estimator does not implement predict(image, weather)"
+            ) from exc
     raise TypeError(f"Unsupported model bundle: {type(bundle).__name__}")

@@ -1,0 +1,62 @@
+{
+  "best_accuracy_model": {
+    "candidate": {
+      "C": 30.0,
+      "epsilon": 0.25,
+      "family": "svr",
+      "feature_mode": "image",
+      "pca_components": 2
+    },
+    "metrics": {
+      "balanced_regime_mae": 1.4773482766689081,
+      "ceiling_label_mae": 0.2116993851988278,
+      "low_visibility_mae": 2.7429971681389884,
+      "macro_mae": 2.828945709734315,
+      "mae": 0.6501919145270446,
+      "r2": -0.015482502782185437,
+      "rmse": 1.446430836751746
+    },
+    "name": "image_svr_pc2_C30.0_e0.25",
+    "path": "models/prl/optimized_accuracy_model.joblib"
+  },
+  "best_balanced_model": {
+    "candidate": {
+      "C": 30.0,
+      "epsilon": 0.75,
+      "family": "svr",
+      "feature_mode": "image",
+      "pca_components": 2
+    },
+    "metrics": {
+      "balanced_regime_mae": 1.4623280954044913,
+      "ceiling_label_mae": 0.5701486558106674,
+      "low_visibility_mae": 2.354507534998315,
+      "macro_mae": 2.767184943491905,
+      "mae": 0.8792501939376616,
+      "r2": 0.010688740923828766,
+      "rmse": 1.4276703019637462
+    },
+    "name": "image_svr_pc2_C30.0_e0.75",
+    "path": "models/prl/optimized_balanced_model.joblib"
+  },
+  "dummy": {
+    "balanced_regime_mae": 1.5227272727272727,
+    "ceiling_label_mae": 0.0,
+    "low_visibility_mae": 3.0454545454545454,
+    "macro_mae": 3.0,
+    "mae": 0.5275590551181102,
+    "mean_bias": 0.5275590551181102,
+    "median_absolute_error": 0.0,
+    "n": 127,
+    "r2": -0.13508877520312979,
+    "rmse": 1.5292425174462532,
+    "within_1km": 0.9133858267716536,
+    "within_2km": 0.9133858267716536
+  },
+  "n_candidates": 352,
+  "n_dates": 23,
+  "n_samples": 127,
+  "protocol": "leave-one-acquisition-date-out development benchmark",
+  "runtime_seconds": 8.651143899987801,
+  "warning": "Candidate selection and reported OOF metrics use the same grouped predictions. Run nested validation before final paper claims."
+}
