@@ -11,8 +11,6 @@
 [![Tests](https://img.shields.io/badge/tests-7%20passed-brightgreen)](#testing)
 [![Results](https://img.shields.io/badge/results-final%20lock--in-blue)](#final-locked-results)
 [![Paper](https://img.shields.io/badge/research%20paper-in%20preparation-6f42c1)](#research-paper)
-[![Last Commit](https://img.shields.io/github/last-commit/027Sakshi/prl-visibility-estimation)](https://github.com/027Sakshi/prl-visibility-estimation/commits/main)
-[![Repository Size](https://img.shields.io/github/repo-size/027Sakshi/prl-visibility-estimation)](https://github.com/027Sakshi/prl-visibility-estimation)
 
 **Repository topics:** `atmospheric-visibility` `computer-vision` `dinov2` `transfer-learning` `weather-data` `regression` `nested-cross-validation` `environmental-monitoring` `reproducible-research`
 
